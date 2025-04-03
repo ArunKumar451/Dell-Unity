@@ -1,6 +1,6 @@
 ---
 - hosts: unity
-  gather_facts: no
+  gather_facts: false
   roles:
    - auth
    - createuser
