@@ -1,1 +1,1 @@
-{ "name": "ansible1", "role": "administrator", "password":"Password456!" }
+{ "name": "ansible2", "role": "operator", "password":"Password456!" }
