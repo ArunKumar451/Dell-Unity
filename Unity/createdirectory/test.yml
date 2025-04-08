@@ -8,8 +8,7 @@
     - name: Run date command and display time
       command: date
       register: current_time
-      become: yes
-      become_user: root
+      become: no
 
     - name: Print current time
       debug:
