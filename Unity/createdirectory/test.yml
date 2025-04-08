@@ -1,11 +1,16 @@
 ---
-- name: directory creation
+- name: Display current time
   hosts: SUSE
   vars:
     ansible_user: root
     ansible_ssh_pass: 74GsItfZ*m
   tasks:
-    - name: Run date command
-      command: time
-      become: yes          # Use sudo if necessary
-      become_user: root   # Run as root (if necessary)
+    - name: Run date command and display time
+      command: date
+      register: current_time
+      become: yes
+      become_user: root
+
+    - name: Print current time
+      debug:
+        msg: "Current time is: {{ current_time.stdout }}"
