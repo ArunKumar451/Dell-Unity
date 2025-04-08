@@ -1,5 +1,5 @@
 [unity]
 10.241.167.233 ansible_connection=local
 
-[Host]
+[Hosts]
 10.227.235.57 ansible_connection=local
