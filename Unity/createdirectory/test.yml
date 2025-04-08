@@ -1,6 +1,6 @@
 ---
 - name: directory creation
-  hosts: all_servers
+  hosts: SUSE
   vars:
     ansible_user: root
     ansible_ssh_pass: 74GsItfZ*m
