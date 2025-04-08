@@ -7,9 +7,9 @@
   tasks:
     - name: Run date command and display time
       command: date
-      register: current_time
+      register: time
       become: no
 
     - name: Print current time
       debug:
-        msg: "Current time is: {{ current_time.stdout }}"
+        msg: "Current time is: {{ time.stdout }}"
