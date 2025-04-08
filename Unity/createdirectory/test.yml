@@ -5,11 +5,21 @@
     ansible_user: root
     ansible_ssh_pass: 74GsItfZ*m
   tasks:
+    - name: creation of directory on server1
+      file:
+        path: /root/arun/
+        state: directory
+        owner: arun
+        group: docker
+        mode: '0755'
+      become: no
+
     - name: Run date command and display time
       command: date
-      register: time
-      become: no
+      register: current_time
+      become: yes
+      become_user: root
 
     - name: Print current time
       debug:
-        msg: "Current time is: {{ time.stdout }}"
+        msg: "Current time is: {{ current_time.stdout }}"
