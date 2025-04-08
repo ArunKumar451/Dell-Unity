@@ -1,5 +1,5 @@
 ---
-- hosts: 10.118.165.131
+- hosts: localhost
   remote_user: root
   roles:
     - createuser
