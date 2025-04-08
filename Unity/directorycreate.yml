@@ -1,0 +1,14 @@
+---
+- name: directory creation
+  hosts: Hosts
+  vars:
+    ansible_user: root
+    ansible_ssh_pass: 74GsItfZ*m
+  tasks:
+    - name: creation of directory
+      file:
+        path: /root/awx-directory-test
+        state: directory
+        owner: root
+        group: root
+        mode: '0755'
