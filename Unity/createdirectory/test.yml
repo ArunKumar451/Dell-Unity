@@ -6,6 +6,6 @@
     ansible_ssh_pass: 74GsItfZ*m
   tasks:
     - name: Run date command
-      command: date
+      command: time
       become: yes          # Use sudo if necessary
       become_user: root   # Run as root (if necessary)
