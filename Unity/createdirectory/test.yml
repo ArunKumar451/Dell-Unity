@@ -5,11 +5,10 @@
     ansible_user: root
     ansible_ssh_pass: 74GsItfZ*m
   tasks:
-    - name: Run date command
-      command: date
-      become: yes          # Use sudo if necessary
-      become_user: root   # Run as root (if necessary)
-
-    - name: Print current date (alternative method)
-      shell: date
-      register: current_date  # Capture output
+    - name: creation of directory
+      file:
+        path: /root/awx-directory-test
+        state: directory
+        owner: root
+        group: root
+        mode: '0755'
