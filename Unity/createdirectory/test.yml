@@ -1,7 +1,7 @@
 ---
-- name: directory creation
+- name: Print only
   hosts: SUSE
-- name: Print Hello message
-  ansible.builtin.debug:
-    msg: "Hello Ansible"
-    
+  tasks:
+    - name: Print Hello message
+      ansible.builtin.debug:
+        msg: "Hello Ansible"
